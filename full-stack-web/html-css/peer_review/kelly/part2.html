@@ -1,0 +1,141 @@
+     <sytle>
+
+      {fieldset {
+    background:lightyellow;
+    border:10px solid yellow;
+    margin-bottom: 10px;
+    width: 720px;
+  }
+  width:180px;
+
+label {
+    display: inline-block;
+    text-align: right;
+    text-align: top;
+   }
+
+
+    span {
+        text-align: center;
+         text-align: top;
+    }
+
+
+textarea  {
+    width:360px;
+    height:50px;
+
+    }
+
+
+    .left {
+        background: red;
+        color: white;
+    }
+
+
+
+    .right {
+        background: purple;
+        color: white;
+    }
+
+    .checkbox, .radio {
+        width:auto;
+    }
+ }
+
+       </style>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name= "author" content="James Kelley">
+        <meta name="keywords" content="HTML,CSS, JavaScript">
+
+    	<title>Dating Web Site Assessment</title>
+
+</head>
+
+
+<body>
+        <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+		<h1>Please Enter Your Details For Our Dating Website!</h1>
+<form method="post" enctype="multipart/form-data"
+   action= "https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
+		<fieldset class="fieldset">
+             <legend>Your Face</legend>
+			<label for="avatar">Your image:</label>
+			<input type="file" name="fileToUpload" required><br>
+            <img id="preview"><br>
+
+			<label for="image">Image Preview:</label>
+
+		</fieldset>
+
+		<fieldset>
+
+			 <legend>Your General Details</legend>
+			 <label for="name">Name:</label>
+			 <input type="text" name="yourFullName" placeholder="Your full name" required><br>
+			 <label for="gender">Gender:</label>
+             <input type="radio" name="male" value="male" required>Male
+             <input type="radio" name="female" value="female"  required>Female<br>
+             <label for="age">Age:</label>
+             <input type="number" name="age" value="age"><br>
+             <label for="date" name="date">Date of Birth:</label>
+			 <input type="date" name="dateOfBirth" value="dateofBirth"><br>
+			 <label for="color">Favorite color:</label>
+			 <input type="color" name="color" value="color"><br>
+
+            <label for="color">Which country:</label>
+	    <select name="countries">
+            <option value="cai">Cairo </option>
+            <option value="fr">France </option>
+            <option value="nw">US </option>
+            <option value="it">Italy </option>
+            <option value="ch">China </option>
+            <option value="sp">Spain </option>
+        </select>
+
+        </fieldset>
+
+        <fieldset>
+
+             <legend>Your Indicators </legend>
+			 <label for="height">Height: </label>
+             <span class="left"> Short </span>
+             <input type="range" min="0" max="100"
+        name="height"> <span class="right">Tall</span>
+              <br>
+             <label for="salary">Salary: </label>
+             <span  class="left"> Poor </span>
+             <input type="range" min="0" max="100"
+        name="salary"> <span class= "right"> Rich </span>
+        </fieldset>
+
+        <fieldset>
+			  <legend>Your Contact Information</legend>
+              <label for="email">Email:</label>
+        	  <input type="email" name="email" required>
+              <br>
+              <label for="mobile">Mobile: </label>
+        	  <input type="tel" name="mobile">
+              <br>
+              <label for="address">Address: </label>
+        	  <textarea name="address"
+        placeholder="Input your address here..."></textarea>
+              <br>
+  			  <label for="contactMethod" id="method"> Method to contact you: </label>
+        	<input type="checkbox" name="email" value="Email">Email
+          <input type="checkbox" name="whatsApp" value="WhatsApp">Whatsapp
+        	 <input type="checkbox" name="inAppChat" value="inAppChat">In-app chat
+         </fieldset>
+
+         <input type="submit" value="Submit">
+     </form>
+
+</body>
+</html>

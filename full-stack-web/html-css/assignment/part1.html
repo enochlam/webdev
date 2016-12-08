@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dating Website Part 1</title>
+  </head>
+
+  <body>
+    <h1>Please Enter Your Details For Our Dating Website!</h1>
+    <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="get" enctype="multipart/form-data">
+        <!-- Section: Your Face -->
+        <fieldset>
+          <legend>Your Face</legend>
+          <label for="faceimage">Image:</label>
+          <input id="faceimage" name="faceimage" type="file" required></input>
+          <br>
+          <label>Image preview:</label>
+          <img id="preview" height="10%">
+        </fieldset>
+
+        <!-- Section: General Details -->
+        <fieldset>
+          <legend>Your General Details</legend>
+          <label for="name">Name:</label>
+          <input id="name" name="name" type="text" placeholder="Your full name" required />
+          <br>
+          <label for="gender">Gender:</label>
+          <input id="gender" name="gender" type="radio" value="Male" required="">Male</input>
+          <input id="gender" name="gender" type="radio" value="Female" required="">Female</input>
+          <br>
+          <label for="age">Age:</label>
+          <input id="age" name="age" type="number" required />
+          <br>
+          <label for="dob">Date of birth:</label>
+          <input id="dob" name="dob" type="date" />
+          <br>
+          <label for="color">Favorite color:</label>
+          <input id="color" name="color" type="color" />
+          <br>
+          <label for="country">Which Country:</label>
+          <select id="country" name="country">
+            <option value=""></option>
+            <option value="UK">UK</option>
+            <option value="Italy">Italy</option>
+            <option value="South Africa">South Africa</option>
+            <option value="Japan">Japan</option>
+            <option value="New Zealand">New Zealand</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your Indicators</legend>
+          <label for="height">Height:</label>
+          <span>Short<input type="range" id="height" name="height" value="50" min="0" max="100">Tall</span>
+          <br>
+          <label for="salary">Salary</label>
+          <span>Poor<input type="range" id="salary" name="salary" value="50" min="0" max="100">Rich</span>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your Contact Information</legend>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <br>
+          <label for="mobile">Mobile:</label>
+          <input type="tel" id="mobile" name="mobile">
+          <br>
+          <label for="addr">Address:</label>
+          <textarea id="addr" name="addr" rows="2" cols="30"></textarea>
+          <br>
+          <label for="mtdcontact">Method to contact you:</label>
+          <input type="checkbox" id="mtdcontact" name="mtdcontact" value="Email">Email</input>
+          <input type="checkbox" id="mtdcontact" name="mtdcontact" value="Whatsapp">Whatsapp</input>
+          <input type="checkbox" id="mtdcontact" name="mtdcontact" value="InAppChat">InAppChat</input>
+        </fieldset>
+
+        <input type="submit" name="submit" value="Submit!">
+    </form>
+
+    <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+  </body>
+</html>

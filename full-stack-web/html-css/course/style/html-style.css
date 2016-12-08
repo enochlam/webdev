@@ -1,0 +1,5 @@
+h1 { color: green }
+h1:hover { background-color: red; font-size: 100 }
+.zappy:hover { background-color: pink; color:red ; font-size: 50 }
+h2 {  color: blue }
+p { color: pink }
