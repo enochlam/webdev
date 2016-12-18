@@ -16,28 +16,26 @@ function generateFaces() {
     theLeftSide.appendChild(img);
 
     console.log("left side " + numberOfFaces + " faces generated");
+  };
 
-    leftSideImages = theLeftSide.cloneNode(true);
-    leftSideImages.removeChild(leftSideImages.lastChild);
-    rightSide.appendChild(leftSideImages);
+  leftSideImages = theLeftSide.cloneNode(true);
+  leftSideImages.removeChild(leftSideImages.lastChild);
+  rightSide.appendChild(leftSideImages);
 
-    //  theLeftSide.lastChild.sytle.width = 20
-    lastChild = theLeftSide.lastChild;
-    lastChild.style.width=10;
-    // theLeftSide.lastChild.onclick=
-    //   function nextLevel(event){
-    //       event.stopPropagation();
-    //       numberOfFaces += 1;
-    //       generateFaces();
-    //     };
+  theLeftSide.lastChild.onclick=
+    function nextLevel(event){
+        event.stopPropagation();
+        numberOfFaces += 1;
+        generateFaces();
+      };
 
-    theBody.onclick = function gameOver() {
-      alert("Game Over!");
-      theBody.onclick = null;
-      theLeftSide.lastChild.onclick = null;
-    };
-  }
+  theBody.onclick = function gameOver() {
+    alert("Game Over!");
+    theBody.onclick = null;
+    theLeftSide.lastChild.onclick = null;
+  };
 }
+
 
 function deleteChildNodes(side) {
   while ( side.firstChild) {
