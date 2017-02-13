@@ -1,0 +1,25 @@
+{
+  "name": "conFusion",
+  "version": "1.0.0",
+  "homepage": "",
+  "description": "Web site for Bower intro",
+  "main": "index.html",
+  "keywords": [
+    "conFusion"
+  ],
+  "authors": [
+    "enoch.hy.lam@gmail.com"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  }
+}
