@@ -144,7 +144,7 @@
        <div class="modal-dialog">
        <!-- Modal content-->
        <div class="modal-content">
-           <div class="modal-header">=
+           <div class="modal-header">
                <button type="button" class="close" data-dismiss="modal">&times;</button>
                <h4 class="modal-title">Login </h4>
            </div>
@@ -310,9 +310,7 @@
           <li><a href="#"><i class="fa fa-envelope"></i> Contact</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-           <li><a data-toggle="modal" data-target="#loginModal">
-           <span class="glyphicon glyphicon-log-in"></span> Login</a>
-           </li>
+           <li><a id="urlLogin"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         </ul>
 
       </div>
@@ -342,7 +340,7 @@
                   </div>
                   <div class="media-body media-middle">
                     <!--button type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#resTblModal"-->
-                    <button type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#resTblModal">
+                    <button id="btnReserveTbl" type="button" class="btn btn-warning btn-block">
                       Reserve Table
                     </button>
                   </div>
@@ -569,6 +567,8 @@
           $("#mycarousel").carousel({ interval: 5000 });
           $("#carousel-pause").click(function(){$("#mycarousel").carousel('pause')});
           $("#carousel-play").click(function(){$("#mycarousel").carousel('cycle')});
+          $("#urlLogin").click(function(){ $('#loginModal').modal('show')});
+          $("#btnReserveTbl").click(function(){ $('#resTblModal').modal('show')});
       });
     </script>
 </body>
